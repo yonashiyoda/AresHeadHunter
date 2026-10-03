@@ -1,0 +1,28 @@
+name: AresHeadHunter
+version: '${project.version}'
+main: com.ares.headhunter.AresHeadHunter
+api-version: '1.20'
+author: Ares
+softdepend: [Vault, PlaceholderAPI]
+
+commands:
+  bounty:
+    description: Bir oyuncunun başına ödül koyar.
+    usage: /bounty <oyuncu> <miktar>
+    permission: aresheadhunter.bounty
+  aheadhunter:
+    description: AresHeadHunter yönetim komutu.
+    usage: /aheadhunter reload
+    permission: aresheadhunter.admin
+    aliases: [ahh]
+
+permissions:
+  aresheadhunter.bounty:
+    description: /bounty komutunu kullanabilir.
+    default: true
+  aresheadhunter.admin:
+    description: Eklentiyi yönetebilir.
+    default: op
+  aresheadhunter.soulbuff:
+    description: Kafa yiyerek buff alabilir.
+    default: true

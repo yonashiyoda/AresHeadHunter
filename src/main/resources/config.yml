@@ -1,0 +1,41 @@
+# AresHeadHunter yapılandırması
+
+head-drop:
+  enabled: true
+  chance: 1.0              # 0.0 - 1.0 arası düşme olasılığı
+  require-pvp: true        # yalnızca oyuncu öldürmelerinde kafa düşsün mü
+
+rarity:
+  thresholds:
+    rare-streak: 3
+    epic-streak: 7
+    legendary-streak: 12
+  value-bonus:
+    enabled: true
+    epic-item-value: 25    # enchant ağırlık toplamı bu değeri geçerse nadirlik bir kademe yükselir
+
+soul-eat:
+  enabled: true
+  duration-seconds: 10
+  speed-amplifier: 1        # %15'e yakın his için Hız II kullanılır (amplifier 1)
+  regeneration-amplifier: 1
+  cooldown-seconds: 30
+
+bounty:
+  currency-symbol: "₺"
+  min-amount: 100
+  big-threshold: 10000       # bu tutarın üzeri "büyük ödül" duyurusu tetikler
+  storage-file: "bounties.yml"
+
+messages:
+  prefix: "<gradient:#ff4d4d:#ffb347>Ares</gradient><dark_gray>» <white>"
+  bounty-set: "<yellow>{target}</yellow> için <gold>{amount}{symbol}</gold> ödül koydun."
+  bounty-chat-announce: "<gray>[<red>Ödül</red>] <white>{target}</white> adlı oyuncunun başına <gold>{amount}{symbol}</gold> ödül kondu!"
+  bounty-big-title: "<bold><red>ÖDÜL İLAN EDİLDİ"
+  bounty-big-subtitle: "<white>{target} <gray>→ <gold>{amount}{symbol}"
+  bounty-claimed: "<green>{killer}</green>, <yellow>{target}</yellow> adlı oyuncunun ödülünü aldı: <gold>{amount}{symbol}</gold>"
+  soul-eat-success: "<light_purple>{target}</light_purple> kafasını yiyerek güç kazandın."
+  soul-eat-cooldown: "<red>Ruh sömürme yeteneğin {seconds} saniye sonra tekrar kullanılabilir."
+  no-permission: "<red>Bu işlem için yetkin yok."
+  economy-missing: "<red>Vault ekonomi eklentisi bulunamadı, ödül sistemi devre dışı."
+  insufficient-funds: "<red>Yeterli bakiyen yok."
